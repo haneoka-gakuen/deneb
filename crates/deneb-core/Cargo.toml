@@ -1,0 +1,40 @@
+[package]
+name = "haneoka-deneb-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Deterministic build graph, validation, bundle, and platform providers for Vega projects"
+readme = "README.md"
+documentation = "https://docs.rs/haneoka-deneb-core"
+keywords = ["visual-novel", "packaging", "game-engine", "build"]
+categories = ["development-tools::build-utils", "game-development"]
+include = [
+  "src/**",
+  "assets/**",
+  "wit/**",
+  "Cargo.toml",
+  "README.md",
+  "LICENSE",
+  "THIRD_PARTY_NOTICES.md",
+]
+
+[dependencies]
+anyhow.workspace = true
+base64.workspace = true
+camino.workspace = true
+deneb-plugin-api = { package = "haneoka-deneb-plugin-api", version = "0.1.0", path = "../deneb-plugin-api" }
+hex.workspace = true
+node-semver.workspace = true
+rmp-serde.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+semver.workspace = true
+sha2.workspace = true
+tempfile.workspace = true
+thiserror.workspace = true
+walkdir.workspace = true
+wasmtime.workspace = true
+wasmparser.workspace = true
+zip.workspace = true

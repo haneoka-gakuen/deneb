@@ -1,0 +1,7 @@
+/target
+/.idea
+/.vscode/*
+!/.vscode/extensions.json
+*.vgpack
+.DS_Store
+.dependencies/

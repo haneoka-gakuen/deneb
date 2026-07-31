@@ -1,0 +1,30 @@
+[package]
+name = "haneoka-deneb"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Build, validate, package, and inspect Vega visual novels"
+readme = "README.md"
+documentation = "https://docs.rs/haneoka-deneb"
+keywords = ["visual-novel", "packaging", "game-engine", "cli"]
+categories = ["command-line-utilities", "game-development"]
+include = [
+  "src/**",
+  "Cargo.toml",
+  "README.md",
+  "LICENSE",
+  "THIRD_PARTY_NOTICES.md",
+]
+
+[[bin]]
+name = "deneb"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+camino.workspace = true
+clap.workspace = true
+deneb-core = { package = "haneoka-deneb-core", version = "0.1.0", path = "../deneb-core" }
+serde_json.workspace = true

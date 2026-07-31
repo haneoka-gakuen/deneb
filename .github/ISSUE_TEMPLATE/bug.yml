@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a reproducible Deneb defect
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Include the target, expected behavior, and actual behavior.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Deneb version
+      placeholder: deneb 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Target
+      options: [validation, web, pwa, electron, tauri, android, ios, plugin]
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Minimal reproduction
+      description: Attach or link a project with private assets removed.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Doctor output
+      description: Paste `deneb --json doctor`; remove private paths if any.

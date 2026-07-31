@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 696" role="img" aria-label="DENEB">
+  <circle cx="348" cy="348" r="344" fill="#31356E"/>
+  <path d="M350 510L205 190L491 208Z" fill="none" stroke="#9AA2D4" stroke-width="6" opacity=".38"/>
+  <circle cx="205" cy="190" r="14" fill="#D8DBF2"/><path d="M491 154L505 194L545 208L505 222L491 262L477 222L437 208L477 194Z" fill="#FFF7E8"/><circle cx="491" cy="208" r="14" fill="#079B78"/><circle cx="350" cy="510" r="14" fill="#D8DBF2"/>
+</svg>

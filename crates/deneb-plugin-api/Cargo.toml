@@ -1,0 +1,25 @@
+[package]
+name = "haneoka-deneb-plugin-api"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Stable manifest and host data types for Deneb build plugins"
+readme = "README.md"
+documentation = "https://docs.rs/haneoka-deneb-plugin-api"
+keywords = ["visual-novel", "plugin", "wasm", "wit"]
+categories = ["development-tools", "game-development"]
+include = [
+  "src/**",
+  "wit/**",
+  "Cargo.toml",
+  "README.md",
+  "LICENSE",
+  "THIRD_PARTY_NOTICES.md",
+]
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true

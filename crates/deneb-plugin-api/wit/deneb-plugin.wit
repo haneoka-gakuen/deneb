@@ -1,0 +1,99 @@
+package haneoka:deneb-plugin@1.0.0;
+
+interface types {
+  enum capability {
+    read-project,
+    read-assets,
+    write-generated,
+    transform-project,
+    encode-asset,
+    target-provider,
+    publish,
+    network,
+    process,
+  }
+
+  enum hook {
+    validate,
+    transform,
+    assets,
+    emit,
+    %package,
+    publish,
+  }
+
+  record limits {
+    max-generated-files: u32,
+    max-generated-bytes: u64,
+    max-diagnostics: u32,
+    max-execution-millis: u64,
+  }
+
+  record session-context {
+    abi-version: u32,
+    build-id: string,
+    session-id: string,
+    granted-capabilities: list<capability>,
+    limits: limits,
+  }
+
+  record diagnostic {
+    severity: string,
+    code: string,
+    message: string,
+    path: option<string>,
+  }
+
+  record generated-file {
+    path: string,
+    bytes: list<u8>,
+  }
+
+  record hook-output {
+    diagnostics: list<diagnostic>,
+    project-patch: option<list<u8>>,
+    generated-files: list<generated-file>,
+  }
+
+  variant plugin-error {
+    invalid-request(string),
+    denied-capability(capability),
+    limit-exceeded(string),
+    failed(string),
+  }
+}
+
+interface host {
+  use types.{diagnostic};
+
+  log: func(level: string, message: string);
+  read-project: func() -> result<list<u8>, string>;
+  read-asset: func(key: string) -> result<list<u8>, string>;
+  write-generated: func(path: string, bytes: list<u8>) -> result<_, string>;
+  emit-diagnostic: func(value: diagnostic);
+}
+
+interface lifecycle {
+  use types.{capability, hook, hook-output, plugin-error, session-context};
+
+  record plugin-metadata {
+    id: string,
+    version: string,
+    abi-version: u32,
+    capabilities: list<capability>,
+    hooks: list<hook>,
+  }
+
+  resource session {
+    run: func(hook: hook, configuration: list<u8>) -> result<hook-output, plugin-error>;
+    dispose: func() -> result<_, plugin-error>;
+  }
+
+  metadata: func() -> plugin-metadata;
+  create: func(context: session-context) -> result<session, plugin-error>;
+}
+
+world build-plugin {
+  import host;
+  export lifecycle;
+}

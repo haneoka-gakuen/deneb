@@ -1,0 +1,10 @@
+{
+  "format": "vega-runtime",
+  "formatVersion": 1,
+  "abiVersion": 1,
+  "entrypoint": "runtime.js",
+  "capabilities": [
+    "vega.lifecycle.v1",
+    "vega.project.v1"
+  ]
+}

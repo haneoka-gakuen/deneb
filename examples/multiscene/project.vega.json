@@ -1,0 +1,64 @@
+{
+  "format": "vega-project",
+  "formatVersion": 1,
+  "id": "deneb-multiscene",
+  "title": {
+    "en": "Deneb Multiscene",
+    "zh-CN": "天津四多场景示例"
+  },
+  "entryScene": "intro",
+  "assets": {
+    "twilight": {
+      "type": "image",
+      "source": "assets/twilight.svg",
+      "mediaType": "image/svg+xml"
+    }
+  },
+  "scenes": {
+    "intro": {
+      "id": "intro",
+      "commands": [
+        {
+          "command": 25,
+          "index": 0,
+          "background": {
+            "url": "assets/twilight.svg"
+          }
+        },
+        {
+          "command": 2,
+          "index": 1,
+          "targetName": "Narrator",
+          "text": "A complete project begins at the edge of evening."
+        },
+        {
+          "command": 503,
+          "index": 2,
+          "sceneId": "chapter-two"
+        }
+      ]
+    },
+    "chapter-two": {
+      "id": "chapter-two",
+      "commands": [
+        {
+          "command": 25,
+          "index": 0,
+          "background": {
+            "url": "assets/twilight.svg"
+          }
+        },
+        {
+          "command": 2,
+          "index": 1,
+          "targetName": "Deneb",
+          "text": "The second scene uses the same offline, content-addressed resource."
+        },
+        {
+          "command": 510,
+          "index": 2
+        }
+      ]
+    }
+  }
+}

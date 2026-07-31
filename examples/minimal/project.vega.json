@@ -1,0 +1,27 @@
+{
+  "format": "vega-project",
+  "formatVersion": 1,
+  "id": "haneoka-example",
+  "title": {
+    "en": "Haneoka example",
+    "zh-CN": "Haneoka 示例"
+  },
+  "entryScene": "main",
+  "assets": {},
+  "plugins": [],
+  "scenes": {
+    "main": {
+      "id": "main",
+      "title": "Prologue",
+      "commands": [
+        {
+          "command": 2,
+          "index": 0,
+          "key": "opening",
+          "name": "Narrator",
+          "text": "Three stars, one story."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: rustup show
+      - run: cargo fmt --all -- --check
+      - run: cargo check --locked --workspace --all-targets
+      - run: cargo clippy --locked --workspace --all-targets --all-features -- -D warnings
+      - run: cargo doc --locked --workspace --all-features --no-deps
+        env:
+          RUSTDOCFLAGS: -D warnings
+      - name: Bound Web smoke
+        run: |
+          node --check examples/runtime-contract/runtime.js
+          cargo run --locked -p haneoka-deneb -- validate examples/minimal/project.vega.json
+          cargo run --locked -p haneoka-deneb -- build examples/minimal/project.vega.json --output target/smoke-web --target web --runtime-bundle examples/runtime-contract --archive false
+          test -f target/smoke-web/index.html
+          test -f target/smoke-web/runtime/boot.js
+          test -f target/smoke-web/runtime/bundle/runtime.js
+          jq -e '.status == "bound" and .abiVersion == 1' target/smoke-web/runtime/contract.json
+
+  msrv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: rustup toolchain install 1.88.0 --profile minimal
+      - run: cargo +1.88.0 check --locked --workspace --all-targets
+
+  dependency-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: rustup show
+      - name: Install pinned cargo-deny
+        run: cargo install cargo-deny --version 0.20.2 --locked
+      - name: Check advisories, licenses, bans, and sources
+        run: cargo deny --locked check advisories bans licenses sources
+
+  portability:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - run: rustup show

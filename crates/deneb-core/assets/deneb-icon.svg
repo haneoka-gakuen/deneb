@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 696" role="img" aria-label="DENEB">
+  <circle cx="348" cy="348" r="344" fill="#31356E"/>
+  <path d="M205 190L491 208L350 510Z" fill="none" stroke="#7C82B5" stroke-width="5" opacity=".42" stroke-linejoin="round"/>
+  <circle cx="205" cy="190" r="14" fill="#D8DBF2"/><circle cx="491" cy="208" r="34" fill="#F8FAFF"/><circle cx="491" cy="208" r="14" fill="#2F81F7"/><circle cx="350" cy="510" r="14" fill="#D8DBF2"/>
+  <path d="M491 140V164M491 252V276M423 208H447M535 208H559" stroke="#F8FAFF" stroke-width="8" stroke-linecap="round"/>
+</svg>

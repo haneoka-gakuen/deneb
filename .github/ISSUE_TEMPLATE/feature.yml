@@ -1,0 +1,21 @@
+name: Feature request
+description: Propose a format, provider, plugin, or workflow improvement
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    attributes:
+      label: Problem
+      description: Describe the author or release workflow that is blocked.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed boundary
+      description: Which crate, provider, ABI, or format should own this?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Compatibility
+      description: Explain impact on project format, opcodes 0–100, locks, and existing targets.

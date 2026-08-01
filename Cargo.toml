@@ -34,7 +34,7 @@ wasmtime = { version = "36.0.13", default-features = false, features = [
   "runtime",
   "std",
 ] }
-wasmparser = "0.230.0"
+wasmparser = "0.236.1"
 wit-parser = { version = "0.230.0", default-features = false }
 zip = { version = "7.1.0", default-features = false, features = ["deflate"] }
 

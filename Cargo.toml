@@ -28,7 +28,7 @@ sha2 = "0.10.9"
 tempfile = "3.24.0"
 thiserror = "2.0.18"
 walkdir = "2.5.0"
-wasmtime = { version = "36.0.13", default-features = false, features = [
+wasmtime = { version = "47.0.2", default-features = false, features = [
   "component-model",
   "cranelift",
   "runtime",

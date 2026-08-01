@@ -36,7 +36,7 @@ wasmtime = { version = "34.0.2", default-features = false, features = [
 ] }
 wasmparser = "0.230.0"
 wit-parser = { version = "0.230.0", default-features = false }
-zip = { version = "7.1.0", default-features = false, features = ["deflate"] }
+zip = { version = "8.6.0", default-features = false, features = ["deflate"] }
 
 [profile.release]
 codegen-units = 1

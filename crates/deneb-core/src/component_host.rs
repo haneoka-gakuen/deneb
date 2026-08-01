@@ -30,7 +30,7 @@ mod bindings {
     wasmtime::component::bindgen!({
         path: "wit",
         world: "build-plugin",
-        trappable_imports: true,
+        imports: { default: trappable },
         require_store_data_send: true,
     });
 }

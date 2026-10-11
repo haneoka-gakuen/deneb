@@ -1,62 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc" font-family="Roboto, 'Noto Sans', sans-serif">
   <title id="title">DENEB</title>
   <desc id="desc">Distribution Engine for Native &amp; Executable Builds</desc>
-  <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset=".72" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#ECF9F5"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#58D3AA"/>
-      <stop offset="1" stop-color="#079B78"/>
-    </linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#111827" flood-opacity=".09"/>
-    </filter>
-  </defs>
-  <rect x=".5" y=".5" width="1599" height="519" rx="24" fill="url(#background)" stroke="#E8E8EA"/>
-  <g transform="translate(92 94)">
-    <text x="0" y="118" fill="#111114" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="108" font-weight="600" letter-spacing="-5">DENEB</text>
-    <text x="2" y="180" fill="#3F3F46" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="20">Distribution Engine for Native &amp; Executable Builds</text>
-    <line x1="2" y1="232" x2="58" y2="232" stroke="#079B78" stroke-width="3" stroke-linecap="round"/>
-    <text x="76" y="238" fill="#71717A" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="2.2">α CYGNI</text>
+  <rect width="1600" height="520" rx="28" fill="#FCF8FD"/>
+  <rect x="1040" y="24" width="536" height="472" rx="28" fill="#31356E"/>
+  <g transform="translate(96 96)">
+    <text x="0" y="96" fill="#1B1B21" font-size="96" font-weight="500">DENEB</text>
+    <text x="0" y="196" fill="#46464F" font-size="26">Distribution Engine for Native &amp; Executable</text><text x="0" y="230" fill="#46464F" font-size="26">Builds</text>
+    <g transform="translate(0 282)">
+      <rect width="138" height="40" rx="8" fill="none" stroke="#C7C5D0" stroke-width="2"/>
+      <circle cx="20" cy="20" r="6" fill="#80D9B6"/>
+      <text x="34" y="27" fill="#46464F" font-size="20" font-weight="500" letter-spacing="1">α CYGNI</text>
+    </g>
   </g>
-  <g transform="translate(930 48)">
-    <g>
-    <path d="M100 86L510 110L306 414Z" fill="none" stroke="#CDD0D7" stroke-width="2"/>
-    <g>
-
-    <path d="M100 69L105 81L117 86L105 91L100 103L95 91L83 86L95 81Z" fill="#A7A9AF"/>
-  </g>
-    <g>
-    <circle cx="510" cy="110" r="28" fill="#079B78" opacity=".11"/>
-    <path d="M510 93L515 105L527 110L515 115L510 127L505 115L493 110L505 105Z" fill="#079B78"/>
-  </g>
-    <g>
-
-    <path d="M306 397L311 409L323 414L311 419L306 431L301 419L289 414L301 409Z" fill="#A7A9AF"/>
-  </g>
-
-
-    <g filter="url(#shadow)">
-    <path d="M306 156L395 205L306 254L217 205Z" fill="url(#accent)"/>
-    <path d="M217 205L306 254V354L217 305Z" fill="#079B78" opacity=".82"/>
-    <path d="M395 205L306 254V354L395 305Z" fill="#58D3AA" opacity=".9"/>
-    <path d="M306 156V254" stroke="#FFFFFF" stroke-opacity=".54" stroke-width="2"/>
-    <path d="M217 205L306 254L395 205" fill="none" stroke="#FFFFFF" stroke-opacity=".54" stroke-width="2"/>
-    <path d="M217 278C167 278 158 316 126 316M395 278C445 278 454 316 486 316M306 354V385" fill="none" stroke="#079B78" stroke-width="3"/>
-    <rect x="74" y="292" width="84" height="50" rx="14" fill="#FFFFFF" stroke="#D8DAE0"/>
-    <rect x="454" y="292" width="84" height="50" rx="14" fill="#FFFFFF" stroke="#D8DAE0"/>
-    <rect x="268" y="385" width="76" height="40" rx="20" fill="#FFFFFF" stroke="#D8DAE0"/>
-    <circle cx="116" cy="317" r="8" fill="#079B78"/>
-    <rect x="487" y="306" width="18" height="24" rx="4" fill="none" stroke="#079B78" stroke-width="3"/>
-    <path d="M291 405H321" stroke="#079B78" stroke-width="4" stroke-linecap="round"/>
-  </g>
-    <text x="100" y="54" text-anchor="middle" fill="#71717A" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4">VEGA</text>
-    <text x="510" y="78" text-anchor="middle" fill="#71717A" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4">DENEB</text>
-    <text x="306" y="454" text-anchor="middle" fill="#71717A" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4">ALTAIR</text>
-  </g>
-  </g>
+  <g stroke="#FFFFFF" stroke-opacity=".32" stroke-width="3" stroke-linecap="round"><line x1="1408.0" y1="173.1" x2="1289.6" y2="394.4"/><line x1="1289.6" y1="394.4" x2="1208.5" y2="125.0"/><line x1="1208.5" y1="125.0" x2="1408.0" y2="173.1"/></g>
+  <circle cx="1408.0" cy="173.1" r="10" fill="#B9AEFF"/><circle cx="1289.6" cy="394.4" r="10" fill="#8CCBFF"/><path transform="translate(1140.95 -69.22) scale(0.42222)" d="M169 370L134 417L70 419L105 464L86 529L151 513L196 550L201 488L250 449L191 427Z" fill="#80D9B6"/>
+  <text x="1436.0" y="181.1" text-anchor="start" font-size="22" font-weight="500" letter-spacing="2" fill="#C7C5D0">VEGA</text><text x="1317.6" y="402.4" text-anchor="start" font-size="22" font-weight="500" letter-spacing="2" fill="#C7C5D0">ALTAIR</text><text x="1148.5" y="133.0" text-anchor="end" font-size="22" font-weight="500" letter-spacing="2" fill="#FFFFFF">DENEB</text>
 </svg>
